@@ -1,0 +1,50 @@
+@import "../../styles/colors";
+
+.container__home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  section {
+    width: 70%;
+
+    h1,
+    h2,
+    p,
+    strong {
+      color: $gray900;
+    }
+  }
+
+  > section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font-size: 54px;
+
+      span {
+        color: $red500;
+      }
+    }
+
+    > img {
+      width: 32%;
+    }
+  }
+
+  > section + section {
+    display: block;
+
+    h2 {
+      margin-block: 20px;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
