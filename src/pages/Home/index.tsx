@@ -1,12 +1,15 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { Card } from "../../components";
 import { Layout } from "../../layout";
 import styles from "./styles.module.scss";
 import { productService } from "../../services/ProductService";
 import { Product } from "../../types/Product";
+import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 
 export function Home() {
   const [products, setPorducts] = useState<Product[]>([]);
+
+  const { addProductToCart } = useContext(ShoppingCartContext);
 
   useEffect(() => {
     (async () => {
@@ -41,6 +44,7 @@ export function Home() {
                 name={product.name}
                 imagePath={product.imagePath}
                 price={product.price}
+                handleClickAddToCartButton={() => addProductToCart({ ...product, quantity: 1 })}
               />
             ))}
           </ul>

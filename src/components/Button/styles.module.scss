@@ -1,12 +1,35 @@
 @import "../../styles/colors";
 
 .button {
-  padding: 12px;
+  padding: 8px;
   border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: 0.2s linear;
+}
+
+.button__primary {
   background-color: $red500;
   color: $white;
+
+  &:hover {
+    background-color: $red600;
+  }
+
+  &:disabled {
+    background-color: $red400;
+  }
+}
+
+.button__seconday {
+  background-color: transparent;
+  border: 1px solid $gray300;
+  color: $gray900;
+
+  &:disabled {
+    color: $gray300;
+    cursor: default;
+  }
 }

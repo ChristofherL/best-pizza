@@ -1,0 +1,36 @@
+@import "../../styles/colors";
+
+.car__item {
+  display: flex;
+  align-items: center;
+
+  img {
+    width: 25%;
+  }
+
+  > div {
+    flex: 1;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+
+      strong {
+        max-width: 175px;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        overflow: hidden;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 1;
+      }
+    }
+
+    div {
+      display: flex;
+      align-items: center;
+      width: max-content;
+      gap: 8px;
+    }
+  }
+}
