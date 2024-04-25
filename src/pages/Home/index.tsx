@@ -27,7 +27,7 @@ export function Home() {
               A <span>Melhor</span> Pizza da Cidade.
             </h1>
             <p>
-              Faça seu pedido agora e experiment o sabor autêntico da Itália entregue na sua porta.
+              Faça seu pedido agora e experimente o sabor autêntico da Itália entregue na sua porta.
             </p>
           </div>
           <img

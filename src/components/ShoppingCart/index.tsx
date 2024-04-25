@@ -6,6 +6,7 @@ import { ShoppingCartContext } from "../../context/ShoppingCartContext";
 import { formatCurrency } from "../../utils/formatCurrency";
 import { CarItem } from "../CarItem";
 import { ShoppingCart as ShoppingCartIcon } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export function ShoppingCart() {
   const { cartProducts, total, totalItems } = useContext(ShoppingCartContext);
@@ -37,12 +38,14 @@ export function ShoppingCart() {
         )}
       </ul>
       {totalItems !== 0 && (
-        <Button
-          variant="primary"
-          leftIcon={() => <CreditCard size={20} />}
-        >
-          Finalizar pedido
-        </Button>
+        <Link to={"/checkout"}>
+          <Button
+            variant="primary"
+            leftIcon={() => <CreditCard size={20} />}
+          >
+            Finalizar pedido
+          </Button>
+        </Link>
       )}
     </div>
   );
