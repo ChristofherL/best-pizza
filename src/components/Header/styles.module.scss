@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .container__header {
   display: flex;

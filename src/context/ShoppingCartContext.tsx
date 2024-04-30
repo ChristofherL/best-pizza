@@ -1,13 +1,9 @@
 import { ReactNode, createContext, useState } from "react";
-import { Product } from "../types/Product";
+import { CartProduct } from "../types/CartProducts";
 
 type ShoppingCartProviderProps = {
   children: ReactNode;
 };
-
-type CartProduct = {
-  quantity: number;
-} & Product;
 
 type ShoppingCartContextProps = {
   cartProducts: CartProduct[];

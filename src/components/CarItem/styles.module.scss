@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .car__item {
   display: flex;

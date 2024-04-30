@@ -4,3 +4,4 @@ export type Product = {
   imagePath: string;
   price: number;
 };
+

@@ -1,0 +1,42 @@
+@use "../../styles/variables" as *;
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgb(black, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fade-in 0.5s ease;
+
+  > div {
+    width: 500px;
+    background-color: $white;
+    border-radius: 8px;
+    padding: 16px;
+    animation: apearing linear 0.25s;
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 16px;
+      color: $gray900;
+    }
+  }
+}
+
+@keyframes fade-in {
+  0% {
+    background-color: rgb(black, 0.2);
+  }
+}
+
+@keyframes apearing {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+}

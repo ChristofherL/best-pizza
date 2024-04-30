@@ -1,0 +1,26 @@
+@use "../../styles/variables" as *;
+
+.container__checkout__confirmation {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 54px;
+    }
+
+    h1,
+    p {
+      color: $gray900;
+    }
+
+    img {
+      width: 32%;
+    }
+  }
+}

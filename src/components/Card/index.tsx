@@ -5,12 +5,12 @@ import { formatCurrency } from "../../utils/formatCurrency";
 
 type CardProps = {
   name: string;
-  imagePath: string;
   price: number;
+  imagePath: string;
   handleClickAddToCartButton?: () => void;
 };
 
-export function Card({ name, imagePath, price, handleClickAddToCartButton }: CardProps) {
+export function Card({ name, price, imagePath, handleClickAddToCartButton }: CardProps) {
   const formattedPrice = formatCurrency(price / 100);
 
   return (

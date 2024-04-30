@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .shopping__cart {
   width: 400px;
@@ -6,11 +6,12 @@
   border: 1px solid $gray300;
   border-radius: 8px;
   padding: 12px;
-  box-shadow: 0 0 15px $gray300;
+  box-shadow: 0 0 15px rgb(black, 0.2);
   position: absolute;
   top: 75px;
-  right: 285px;
+  right: 288px;
   animation: fade-in linear 0.2s;
+  z-index: 1;
 
   strong,
   span {

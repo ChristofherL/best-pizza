@@ -1,4 +1,4 @@
-@import "../../styles/variables";
+@use "../../styles/variables" as *;
 
 .button {
   padding: 8px;
@@ -8,6 +8,7 @@
   justify-content: center;
   gap: 8px;
   transition: 0.2s linear;
+  font-family: $inter;
 }
 
 .button__primary {
@@ -20,6 +21,7 @@
 
   &:disabled {
     background-color: $red400;
+    cursor: default;
   }
 }
 

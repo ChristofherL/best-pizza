@@ -1,0 +1,106 @@
+@use "../../styles/variables" as *;
+
+.container__checkout {
+  display: flex;
+  justify-content: center;
+
+  > div {
+    width: 70%;
+
+    h1,
+    h2 {
+      color: $gray900;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    h1 {
+      margin-block: 24px;
+    }
+
+    > div {
+      width: 100%;
+      display: flex;
+      align-items: start;
+      gap: 28px;
+
+      form {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 28px;
+
+        fieldset {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          gap: 16px;
+          border: 1px solid $gray300;
+          border-radius: 8px;
+          padding: 16px;
+          position: relative;
+
+          legend {
+            position: absolute;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 24px;
+            font-weight: 600;
+            color: $gray900;
+          }
+
+          & > legend + div {
+            margin-top: 40px;
+          }
+        }
+      }
+
+      section {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        border: 1px solid $gray300;
+        border-radius: 8px;
+        padding: 16px;
+        position: relative;
+
+        table tr {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 16px;
+
+          &:last-child {
+            margin: 0;
+          }
+
+          th {
+            color: $gray900;
+          }
+
+          td {
+            color: $gray500;
+          }
+        }
+      }
+    }
+  }
+}
+
+.modal__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+
+  strong {
+    color: $gray900;
+  }
+
+  span {
+    color: $gray500;
+  }
+}
